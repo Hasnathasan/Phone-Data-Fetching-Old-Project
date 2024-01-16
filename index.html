@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+    rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+    <script>
+    tailwind.config = {
+    darkMode: "class",
+    theme: {
+        fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
+        },
+    },
+    corePlugins: {
+        preflight: false,
+    },
+    };
+    </script>
+</head>
+<body>
+    <div
+    class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-success motion-reduce:animate-[spin_1.5s_linear_infinite]"
+    role="status">
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Loading...</span
+    >
+  </div>
+
+    <div class="flex gap-x-3 mx-auto container justify-center my-6">
+        <input id="search-input" type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
+        <button id="search-btn" class="btn btn-primary">Search</button>
+    </div>
+
+    <div class="hidden mt-44" id="false">
+        <h1 class="text-5xl text-center">Nothing is here</h1>
+    </div>
+    <div id="loding" class="container h-96 items-center mx-auto flex justify-center hidden">
+        <progress class="progress w-44"></progress>
+    </div>
+
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between text-center gap-10" id="mobile-container">
+        
+    </div>
+    <button onclick="showMore()" id="show-more" class="bg-green-600 p-4 rounded hidden">Show more</button>
+      <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
