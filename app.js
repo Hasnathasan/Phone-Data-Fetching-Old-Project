@@ -62,7 +62,7 @@ const replaceData = (showValue) => {
     mobiles(searchValue, showValue);
 }
 
-const lodingDetails = async(mobId) => {
+const lodingDetails = async (mobId) => {
     console.log(mobId)
     const url = `https://openapi.programming-hero.com/api/phone/${mobId}`;
     const res = await fetch(url);
